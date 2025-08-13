@@ -136,9 +136,13 @@ EOF
 
 Reload & enable:
 
-```bash
+```
 sudo systemctl daemon-reload
+```
+```
 sudo systemctl enable zgs
+```
+```
 sudo systemctl start zgs
 ```
 
@@ -155,7 +159,7 @@ sudo systemctl status zgs
 Follow logs:
 
 ```bash
-tail -f /mnt/data/0g-storage-node/run/log/zgs.log
+tail -f /mnt/data/0g-storage-node/run/log/zgs.log.$(TZ=UTC date +%Y-%m-%d)
 ```
 
 Check sync and block status:
@@ -172,7 +176,7 @@ sleep 5; done
 
 ---
 
-## 🛑 **Stop & Remove Node**
+## 🛑 **If you want to Stop & Remove Node**
 
 ```bash
 sudo systemctl stop zgs
